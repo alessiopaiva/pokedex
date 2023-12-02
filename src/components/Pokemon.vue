@@ -51,12 +51,12 @@ export default {
         name: String,
         url: String
     },
-    // filters: {
-    //     upper: function(value){
-    //         var newName = value[0].toUpperCase() + value.slice(1);
-    //         return newName;
-    //     }
-    // },
+    filters: {
+        upper: function(value){
+            var newName = value[0].toUpperCase() + value.slice(1);
+            return newName;
+        }
+    },
     methods: {
         mudarSprite: function(){
             if(this.isFront){
@@ -68,11 +68,12 @@ export default {
             }
         }
     },
-    'extends': [
-    'plugin:vue/vue3-essential',
-    'eslint:recommended',
-    '@vue/typescript/recommended'
-  ],
+    // 'extends': [
+    // 'plugin:vue/vue3-essential',
+    // 'eslint:recommended',
+    // '@vue/typescript/recommended',
+    // vue/no-deprecated-filter
+//   ],
 
 }
 </script>
